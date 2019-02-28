@@ -16,4 +16,8 @@ The input file length is : 15000
 The unique number count is: 13414
 The entropy is: 0.9843445072616206
 
+## Chi-Squared test
+Still in implenting...
+
+
 

@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-let buffer = fs.readFileSync("../data/random.json");
+let buffer = fs.readFileSync("./data/random.json");
 let input = JSON.parse(buffer.toString());
 let counts = {};
 
@@ -18,16 +18,16 @@ let ps = frequency.map(fre => {
     return fre/input.length;
 })
 
-console.log("The unique number count is: " + frequency.length);
+let maxPossibleValue = 65535;
 
-let entropy = 0;
-for(let i=0; i < ps.length; i++){
-    entropy = entropy - ps[i] * Math.log(ps[i]);
+let chiSquared = 0;
+let expectation = input.length/(maxPossibleValue + 1);
+
+for(let i =0; i <= maxPossibleValue; ++i){
+    let o = counts[i]? counts[i] : 0;
+    chiSquared = chiSquared + Math.pow((o-expectation),2);
 }
 
-entropy = entropy/Math.log(input.length);
+chiSquared = chiSquared/expectation;
 
-console.log("The entropy is: " + entropy );
-
-
-
+console.log("The chi-squared output is : " + chiSquared);
