@@ -19,6 +19,7 @@ let ps = frequency.map(fre => {
 })
 
 let maxPossibleValue = 65535;
+let possbileDataPoints = maxPossibleValue + 1;
 
 let chiSquared = 0;
 let expectation = input.length/(maxPossibleValue + 1);
@@ -31,3 +32,7 @@ for(let i =0; i <= maxPossibleValue; ++i){
 chiSquared = chiSquared/expectation;
 
 console.log("The chi-squared output is : " + chiSquared);
+
+let normalizedChiSquared = (chiSquared - possbileDataPoints )/ Math.sqrt(2*possbileDataPoints);
+
+console.log("The normalized chi squared value(which can be compared with standard normal distribution): " + normalizedChiSquared)
