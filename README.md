@@ -26,7 +26,13 @@ The input file length is : 15000
 
 The chi-squared output is : 65399.5648
 
-The normalized chi squared value(which can be compared with standard normal distribution): -0.37685255903337017
+The normalized chi squared value(which can be compared with standard normal distribution): 0.37685255903337017
+
+![chi Squared](chiSquared.png)
+
+The Area is 0.3557.
+
+
 
 
 
