@@ -1,6 +1,9 @@
-const fs = require('fs')
 
-let buffer = fs.readFileSync("../data/random.json");
+const fs = require('fs')
+const inputPath = process.argv[2]? process.argv[2] : "./data/random.json";
+console.log(inputPath);
+
+let buffer = fs.readFileSync(inputPath);
 let input = JSON.parse(buffer.toString());
 let counts = {};
 
