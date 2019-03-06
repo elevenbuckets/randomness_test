@@ -1,8 +1,14 @@
 const fs = require('fs')
 
-let buffer = fs.readFileSync("./data/random.json");
+const inputPath = process.argv[2]? process.argv[2] : "./data/random.json";
+console.log(inputPath);
+
+let buffer = fs.readFileSync(inputPath);
 let input = JSON.parse(buffer.toString());
 let counts = {};
+
+const maxPossibleValue = 65535;
+const possbileDataPoints = maxPossibleValue + 1;
 
 console.log("The input file length is : " + input.length);
 for(let i = 0; i < input.length; ++i){
@@ -18,8 +24,7 @@ let ps = frequency.map(fre => {
     return fre/input.length;
 })
 
-let maxPossibleValue = 65535;
-let possbileDataPoints = maxPossibleValue + 1;
+
 
 let chiSquared = 0;
 let expectation = input.length/(maxPossibleValue + 1);
