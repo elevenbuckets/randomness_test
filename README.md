@@ -33,8 +33,34 @@ The normalized chi squared value(which can be compared with standard normal dist
 The Area is 0.3557.
 
 
+# The result for ticket 1 and ticket 2
 
+## Ticket 1 
 
+The input file length is : 15000
+
+The unique number count is: 13380
+
+The entropy is: 0.9839585986885104
+
+The input file length is : 15000
+
+The chi-squared output is : 65845.2096
+
+The normalized chi squared value(which can be compared with standard normal distribution): 0.8540789256561768
+
+## Ticket 2
+The input file length is : 15000
+
+The unique number count is: 13420
+
+The entropy is: 0.9843526587175867
+
+The input file length is : 15000
+
+The chi-squared output is : 65469.469866666666
+
+The normalized chi squared value(which can be compared with standard normal distribution): -0.18376526731736478
 
 
 
