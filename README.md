@@ -62,5 +62,9 @@ The chi-squared output is : 65469.469866666666
 
 The normalized chi squared value(which can be compared with standard normal distribution): -0.18376526731736478
 
+## Display 
+
+Open the display/index.html using a broswer
+
 
 
